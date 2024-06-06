@@ -1,0 +1,155 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+  background-color: #ffffff;
+  width: 350px;
+  border-radius: 1em;
+  padding: 2em;
+  perspective: 800px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.credit-card {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  transform-style: preserve-3d;
+  transition: 0.3s;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(#33a4f8, #206df9);
+  border-radius: 1em;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  padding: 1em;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.branding img {
+  width: 70px;
+  height: auto;
+}
+
+.card-back {
+  position: absolute;
+  transform: rotateY(180deg);
+}
+
+.card-number {
+  color: #ffffff;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  margin-top: 2em;
+}
+
+.details {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  font-size: 0.8em;
+}
+
+.details span {
+  display: block;
+}
+
+.details #card-holder-name {
+  text-transform: uppercase;
+}
+
+.card-back .black-strip {
+  position: relative;
+  background-color: #000000;
+  height: 50px;
+  top: 2em;
+}
+
+.card-back .white-strip {
+  top: 3em;
+  position: relative;
+  text-align: right;
+}
+
+.card-back .white-strip span {
+  margin-right: 1em;
+}
+
+.card-back .white-strip div {
+  height: 30px;
+  background-color: #ffffff;
+  margin-top: 0.5em;
+}
+
+.card-back .visa-logo {
+  position: absolute;
+  width: 50px;
+  margin-top: 4em;
+  right: 1em;
+}
+
+form {
+  margin-top: 2em;
+}
+
+label,
+input {
+  display: block;
+  width: 100%;
+}
+
+label {
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+input {
+  border: 1px solid #000000;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+input:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+form .date-cvv {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    width: 90%;
+  }
+}
