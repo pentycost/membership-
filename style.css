@@ -23,7 +23,10 @@ body {
   perspective: 800px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-
+.submit {
+    color:white;
+    background-color :#0369a1;
+}
 .credit-card {
   position: relative;
   width: 100%;
